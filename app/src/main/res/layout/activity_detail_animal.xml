@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,30 +7,34 @@
     tools:context=".DetailAnimalActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txt_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbarSize="16dp"
-        style="bold"
-        android:text="Sample Title"
-        />
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Sample Title"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:paddingTop="25dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_color"
-        android:textSize="12sp"
-        android:text="Sample Color"
-        />
+        <TextView
+            android:id="@+id/txt_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_name"
+            android:gravity="center"
+            android:text="Sample Type"
+            android:textSize="12sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_description"
-        android:maxLines="2"
-        android:ellipsize="end"
-        android:text="Sample Desc"
-        />
-
-</LinearLayout>
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_type"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Sample Desc"
+            android:paddingHorizontal="25dp"
+            android:paddingTop="25dp"/>
+</RelativeLayout>

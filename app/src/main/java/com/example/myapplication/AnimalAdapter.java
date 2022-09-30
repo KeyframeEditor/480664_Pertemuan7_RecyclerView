@@ -38,13 +38,17 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
     public void onBindViewHolder(@NonNull final AnimalAdapter.ViewHolder holder, int position) {
         final Animal animal = values.get(position);
         holder.txt_name.setText(animal.name);
-        holder.txtColor.setText(animal.color);
+        holder.txtType.setText(animal.type);
         holder.txt_description.setText(animal.desc);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "This is: "+animal.name, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(holder.itemView.getContext(),DetailAnimalActivity.class);
+                intent.putExtra("name",animal.name);
+                intent.putExtra("type",animal.type);
+                intent.putExtra("desc",animal.desc);
+                view.getContext().startActivity(intent);
             }
         });
 //        holder.btnClick.setOnClickListener(new View.OnClickListener() {
@@ -87,14 +91,14 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView txt_name;
-        TextView txtColor;
+        TextView txtType;
         TextView txt_description;
 //        Button btnClick;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txt_name = itemView.findViewById(R.id.txt_name);
-            txtColor = itemView.findViewById(R.id.txt_color);
+            txtType = itemView.findViewById(R.id.txt_color);
             txt_description = itemView.findViewById(R.id.txt_description);
 //            btnClick = itemView.findViewById(R.id.btnClick);
         }

@@ -2,12 +2,12 @@ package com.example.myapplication;
 
 public class Animal {
     String name;
-    String color;
+    String type;
     String desc;
 
-    public Animal(String name, String color, String desc) {
+    public Animal(String name, String type, String desc) {
         this.name = name;
-        this.color = color;
+        this.type = type;
         this.desc = desc;
     }
 
@@ -24,11 +24,11 @@ public class Animal {
     // COLOR
 
     public String getColor() {
-        return color;
+        return type;
     }
 
     public void setColor(String color) {
-        this.color = color;
+        this.type = color;
     }
 
     // DESC

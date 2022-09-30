@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class DetailAnimalActivity extends AppCompatActivity {
 
     TextView name;
-    TextView color;
+    TextView type;
     TextView desc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,17 +17,17 @@ public class DetailAnimalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_animal);
 
         name = findViewById(R.id.txt_name);
-        color= findViewById(R.id.txt_color);
+        type = findViewById(R.id.txt_type);
         desc = findViewById(R.id.txt_description);
 
         Intent intent = getIntent();
 
         String data1 = intent.getStringExtra("name");
-        String data2 = intent.getStringExtra("color");
+        String data2 = intent.getStringExtra("type");
         String data3 = intent.getStringExtra("desc");
 
         name.setText(data1);
-        color.setText(data2);
+        type.setText(data2);
         desc.setText(data3);
     }
 }

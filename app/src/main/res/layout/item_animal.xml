@@ -13,6 +13,7 @@
         android:textSize="16dp"
         android:textStyle="bold"
         android:text="Sample Title"
+        android:textColor="@android:color/holo_blue_dark"
         />
 
     <TextView
@@ -21,6 +22,7 @@
         android:id="@+id/txt_color"
         android:textSize="12sp"
         android:text="Sample Color"
+        android:textStyle="bold"
         />
 
     <TextView
@@ -30,13 +32,7 @@
         android:maxLines="2"
         android:ellipsize="end"
         android:text="Sample Desc"
+        android:textSize="12sp"
         />
-
-<!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="CLICK ME"-->
-<!--        android:textColor="@android:color/black"-->
-<!--        android:id="@+id/btnClick"/>-->
 
 </LinearLayout>
